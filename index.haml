@@ -1,0 +1,51 @@
+!!!
+%html.colorset-1-light-stripe-bg
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    / @reload
+    / @stylesheet normalize style
+    / @javascript jquery-1.8.3.min app fittext jquery.color-2.1.2.min colorcycle
+    %link{:href => "<!-- @path favicon.ico -->", :rel => "shortcut icon"}
+    %link{:href => "<!-- @path apple-touch-icon.png -->", :rel => "apple-touch-icon"}
+    %title VIDEOBALL
+
+  %body
+    .sideline-nav.colorset-1-sideline-bg
+      %header.row
+        .large-12.small-centered.columns
+          %ul.small-block-grid-1.large-block-grid-5
+            %li.colorset-1-light-stripe
+              NEWS
+            %li.colorset-1-dark-stripe
+              %a{:href => "#", :onclick => "return false;"} LIVE STREAMS
+            %li.colorset-1-light-stripe
+              %a{:href => "#", :onclick => "return false;"} LEADERBOARDS
+            %li.colorset-1-dark-stripe
+              %a.color-btn{:href => "#", :onclick => "return false;"} CHANGE COLORS
+            %li.colorset-1-light-stripe
+              %a{:href => "#", :onclick => "return false;"} LOG IN
+    .videoball-container-stripe.emtop-margin.colorset-1-player1-bg
+      .row
+        .large-12.large-centered.columns
+          .videoball-title.title-black-shadow
+            VIDEOBALL
+
+    .row
+      .large-12.large-centered.columns
+        Leaderboards
+
+    .row
+      .large-12.large-centered.columns
+        Blog
+
+    .row
+      .large-12.large-centered.columns
+        Streaming Game
+
+    .row
+      .large-12.large-centered.columns
+        Bracket
+
+    :javascript
+      $(".videoball-title").fitText(.4);
