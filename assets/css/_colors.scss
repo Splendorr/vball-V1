@@ -1,7 +1,3 @@
-$tangerine: rgba(207, 141, 85, 1);
-$redpeach: rgba(239, 46, 0,1);
-$tangerine3: rgba(188,89,62,1);
-
 // Color Palettes
 
 // Colorset-1
@@ -14,8 +10,15 @@ $tangerine3: rgba(188,89,62,1);
   $colorset-1-light-stripe: #CDB38F; 
   $colorset-1-court-marks: #D9C2A5;
   $colorset-1-sideline: #D86E0F;
+  $colorset-1-sideline-center: #DE7110;
+  $colorset-1-sideline-mid: #CD690F;
+  $colorset-1-sideline-shadow: #BA5F0D;
   $colorset-1-game-white: #F0F0F0;
   $colorset-1-game-black: #000000; 
+
+  .colorset-1-topstripe {
+    @include linear-gradient(90deg, $colorset-1-sideline-shadow 0%, $colorset-1-sideline-mid 17%, $colorset-1-sideline-center 50%, $colorset-1-sideline-mid 83%, $colorset-1-sideline-shadow 100%, $fallback: $colorset-1-sideline);
+  }
 
   .colorset-1-player1 {
     color: $colorset-1-player1; 
