@@ -29,25 +29,57 @@
           .videoball-title.title-black-shadow
             VIDEOBALL
 
-    .row
-      .large-12.large-centered.columns
-        Leaderboards
-        %img{:src => "@path p1.png"}
-        %img{:src => "@path p2.png"}
-        %img{:src => "@path ball.png"}
-        %img{:src => "@path octagon.png"}
+    .colorset-1-light-stripe-bg.section-divider
+      .row.emtop-padding.embottom-padding
+        .large-12.large-centered.columns
+          .section-title 
+            %span Art Test
+          %br/
+          %img{:src => "@path p1.png"}
+          %img.rotate180{:src => "@path p1.png"}
+          %img.rotate90{:src => "@path p1.png"}
+          %img.rotate270{:src => "@path p1.png"}
+          %img{:src => "@path p2.png"}
+          %img.rotate180{:src => "@path p2.png"}
+          %img.rotate90{:src => "@path p2.png"}
+          %img.rotate270{:src => "@path p2.png"}
+          %img{:src => "@path ball.png"}
+          %img{:src => "@path octagon.png"}
 
-    .row
-      .large-12.large-centered.columns
-        Blog
+    .colorset-1-dark-stripe-bg.section-divider
+      .row.emtop-padding.embottom-padding
+        .large-12.large-centered.columns
+          .section-title 
+            %span Leaderboards
 
-    .row
-      .large-12.large-centered.columns
-        Streaming Game
+    .colorset-1-light-stripe-bg.section-divider
+      .row.emtop-padding.embottom-padding
+        .large-12.large-centered.columns
+          .section-title 
+            %span Blog
 
-    .row
-      .large-12.large-centered.columns
-        Bracket
+    .colorset-1-dark-stripe-bg.section-divider
+      .row.emtop-padding.embottom-padding
+        .large-12.large-centered.columns
+          .section-title 
+            %span Streaming Game
+      .row.emtop-margin
+        .large-8.columns
+          .flex-video
+            <object bgcolor='#000000' data='http://www.twitch.tv/widgets/archive_embed_player.swf' height='378' id='clip_embed_player_flash' type='application/x-shockwave-flash' width='620'><param name='movie' value='http://www.twitch.tv/widgets/archive_embed_player.swf'><param name='allowScriptAccess' value='always'><param name='allowNetworking' value='all'><param name='allowFullScreen' value='true'><param name='flashvars' value='auto_play=false&amp;channel=actionbutton&amp;title=VIDEOBALL%2Bpre-beta%2Btesting%2B07212013&amp;chapter_id=2617991&amp;start_volume=25'></object><br><a href="http://www.twitch.tv/actionbutton" class="trk" style="padding:2px 0px 4px; display:block; width: 320px; font-weight:normal; font-size:10px; text-decoration:underline; text-align:center;">Watch live video from actionbutton on TwitchTV</a>
+
+    .colorset-1-light-stripe-bg.section-divider
+      .row.emtop-padding.embottom-padding
+        .large-12.large-centered.columns
+          .section-title 
+            %span Bracket
+
+    .sideline-nav.colorset-1-footerstripe.emtop-margin
+      %footer.row
+        .large-4.small-centered.columns.emtop-margin.embottom-margin
+          %a{:href => "http://actionbutton.com", :target => "_blank"}
+            %img{:src => "@path actionButtonLogo-2000.png"}
+          .justascootch.copyrightsteelfish &copy; MMXIII
 
     :javascript
       $(".videoball-title").fitText(.4);

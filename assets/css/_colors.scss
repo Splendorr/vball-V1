@@ -3,6 +3,7 @@
 // Colorset-1
 
   $colorset-1-player1: #E72D01;
+  $colorset-1-player1-int: #D85B3D;
   $colorset-1-player2: #4280A0;
   $colorset-1-player3: #F34300;
   $colorset-1-player4: #376C86;
@@ -13,6 +14,9 @@
   $colorset-1-sideline-center: #DE7110;
   $colorset-1-sideline-mid: #CD690F;
   $colorset-1-sideline-shadow: #BA5F0D;
+  $colorset-1-footer-center: #DF7414;
+  $colorset-1-footer-mid: #CA670E;
+  $colorset-1-footer-shadow: #BC600D;
   $colorset-1-game-white: #EFEFEF;
   $colorset-1-game-black: #000000; 
 
@@ -23,6 +27,17 @@
   .colorset-1-toplink {
     color: $colorset-1-light-stripe; 
     a {padding: 7px; color: $colorset-1-light-stripe; &:link { color: $colorset-1-light-stripe; } &:hover { color: $colorset-1-light-stripe; background-color: $colorset-1-player2; } &:visited { color: $colorset-1-light-stripe; } &:active { color: $colorset-1-light-stripe; } } // End a
+  }
+
+  .colorset-1-footerstripe {
+    @include linear-gradient(
+      90deg, 
+      $colorset-1-footer-shadow 0%, 
+      $colorset-1-footer-mid 17%, 
+      $colorset-1-footer-center 50%, 
+      $colorset-1-footer-mid 83%, 
+      $colorset-1-footer-shadow 100%, 
+      $fallback: $colorset-1-sideline);
   }
 
   .colorset-1-player1 {

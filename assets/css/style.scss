@@ -1,5 +1,6 @@
 @import "foundation";
 @import "_colors";
+@import "_transforms";
 
 /* Available Variables */
 $small-screen: emCalc(768px);
@@ -91,6 +92,42 @@ $goldlink: rgba(255,226,70,1);
 
   .title-black-shadow {
     text-shadow: 3px 3px rgba(0,0,0,0.7);
+  }
+
+  $section-padding: 7px 14px 7px 0px; // top, right, bottom, left
+
+  .section-title {
+    font-family: 'SteelfishRgItalic', sans-serif;
+    font-size: 4em;
+    span { 
+      background-color: $colorset-1-player1-int;
+      padding: $section-padding;
+    }
+
+    border-left: solid 500px $colorset-1-player1-int;
+    margin-left: -500px;
+    padding: $section-padding;
+    // padding-left: 500px;
+    // width: auto;
+    // margin-right: auto;
+    // padding: 7px;
+    // padding-right: 0;
+
+    overflow: hidden;
+  }
+
+  .section-divider {
+    border-bottom: 1.5em double $colorset-1-player2;
+  }
+
+  .justascootch {
+    margin-top: 5px;
+  }
+
+  .copyrightsteelfish {
+    font-size: 1.5em;
+    color: white;
+    // color: #000;
   }
 }
 
