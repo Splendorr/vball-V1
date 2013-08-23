@@ -26,7 +26,10 @@
 
   .colorset-1-toplink {
     color: $colorset-1-light-stripe; 
-    a {padding: 7px; color: $colorset-1-light-stripe; &:link { color: $colorset-1-light-stripe; } &:hover { color: $colorset-1-light-stripe; background-color: $colorset-1-player2; } &:visited { color: $colorset-1-light-stripe; } &:active { color: $colorset-1-light-stripe; } } // End a
+    a { 
+      padding: 3px 9px 3px 9px; // top, right, bottom, left
+      color: $colorset-1-light-stripe; 
+      &:link { color: $colorset-1-light-stripe; } &:hover { color: $colorset-1-light-stripe; background-color: $colorset-1-player2; } &:visited { color: $colorset-1-light-stripe; } &:active { color: $colorset-1-light-stripe; } } // End a
   }
 
   .colorset-1-footerstripe {
