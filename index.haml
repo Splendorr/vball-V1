@@ -26,7 +26,13 @@
     .videoball-logo-container-stripe.emtop-margin
       .row
         .large-10.large-centered.columns
-          .videoball-title
+          %noscript
+            .videoball-title
+              %a{:href => "#", :onclick => "return false;"}
+                %img{:src => "@path logo.png"}
+          :javascript
+            $('noscript').remove();
+          .videoball-title.slide-in
             %a{:href => "#", :onclick => "return false;"}
               %img{:src => "@path logo.png"}
 

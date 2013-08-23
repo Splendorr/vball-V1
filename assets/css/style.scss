@@ -116,6 +116,7 @@ $goldlink: rgba(255,226,70,1);
     width: 100%;
     padding-top: 1.5em;
     padding-bottom: 2em;
+    overflow: hidden;
   }
   .videoball-title {
     position: relative;
@@ -124,6 +125,10 @@ $goldlink: rgba(255,226,70,1);
     text-align: center;
     color: $colorset-1-game-white;
     z-index: 2;
+  }
+
+  .slide-in {
+    display: none;
     left: 2000px;
   }
 
