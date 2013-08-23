@@ -129,7 +129,12 @@ $goldlink: rgba(255,226,70,1);
 
   .slide-in {
     display: none;
-    left: 2000px;
+    left: 1000px;
+
+    @media #{$small} {
+      left: 2000px;
+    }
+
   }
 
   .emtop-margin {
