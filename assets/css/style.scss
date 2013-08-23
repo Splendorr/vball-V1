@@ -66,6 +66,33 @@ $goldlink: rgba(255,226,70,1);
     }
   }
 
+  $logo-box-shadow-color: $colorset-1-light-stripe;
+  .videoball-logo-container-stripe {
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    z-index: 1;
+    background-color: white;
+    // border-top: solid 1em $colorset-1-ball;
+    // border-bottom: solid 1em $colorset-1-ball;
+    box-shadow:
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 4.5em $logo-box-shadow-color,
+      inset 0em -5em $logo-box-shadow-color
+    ;
+
+    @media #{$small} {
+      box-shadow:
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 6em $logo-box-shadow-color,
+      inset 0em -6.5em $logo-box-shadow-color
+    ;
+    }
+
+  }
+
   .videoball-container-stripe {
     // background-color: $redpeach;
     width: 100%;
@@ -77,6 +104,7 @@ $goldlink: rgba(255,226,70,1);
     // font-size: 12em;
     text-align: center;
     color: $colorset-1-game-white;
+    z-index: 2;
   }
 
   .emtop-margin {
