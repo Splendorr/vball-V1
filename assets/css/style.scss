@@ -134,7 +134,148 @@ $goldlink: rgba(255,226,70,1);
     @media #{$small} {
       left: 2000px;
     }
+  } // End .slide-in
 
+  .advertisements {
+
+    // border: solid 2px $colorset-1-game-white;
+    
+    h1, h2, h3 {
+      font-family: 'SteelfishRgItalic', sans-serif;
+    }
+
+  }
+
+  $advert-padding: 8px 0px 12px 4px; // top, right, bottom, left
+
+  .adheader {
+    font-family: 'SteelfishRgItalic', sans-serif;
+    font-size: 2em;
+    background-color: $colorset-1-player2;
+    color: $colorset-1-game-white;
+    // width: 100%;
+    text-align: left;
+
+    span { 
+      background-color: $colorset-1-player2;
+      padding: $advert-padding;
+    }
+
+    border-right: solid 5000px $colorset-1-player2;
+    margin-right: -5000px;
+    padding: $advert-padding;
+    // padding-left: 500px;
+    // width: auto;
+    // margin-right: auto;
+    // padding: 7px;
+    // padding-right: 0;
+
+    overflow: hidden;
+  }
+
+  $section-title-padding: 7px 14px 7px 0px; // top, right, bottom, left
+
+  .section-title {
+    font-family: 'SteelfishRgItalic', sans-serif;
+    font-size: 4em;
+    line-height: 1.4em;
+    color: $colorset-1-game-white;
+
+    span { 
+      background-color: $colorset-1-player1;
+      padding: $section-title-padding;
+    }
+
+    border-left: solid 5000px $colorset-1-player1;
+    margin-left: -5000px;
+    padding: $section-title-padding;
+    // padding-left: 500px;
+    // width: auto;
+    // margin-right: auto;
+    // padding: 7px;
+    // padding-right: 0;
+
+    overflow: hidden;
+  }
+
+  .section-title2 {
+    display: inline-block;
+    font-family: 'SteelfishRgItalic', sans-serif;
+    font-size: 4em;
+    color: $colorset-1-game-white;
+    background-color: $colorset-1-player1;
+    text-align: left;
+    padding-left: 5000px;
+    margin-left: -5000px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 14px;
+    overflow: hidden;
+
+    // padding: $section-title-padding;
+  }
+
+  .articletitle2 {
+    display: inline-block;
+    font-family: 'SteelfishRgItalic', sans-serif;
+    // font-size: 4em;
+    color: $colorset-1-game-white;
+    background-color: $colorset-1-player1;
+    text-align: left;
+    padding-left: 5000px;
+    margin-left: -5000px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 14px;
+    overflow: hidden;
+
+    // padding: $section-title-padding;
+  }
+
+  $article-header-padding: 7px 14px 7px 0px; // top, right, bottom, left
+
+  .article-header {
+    font-family: 'SteelfishRgItalic', sans-serif;
+    // font-size: 3em;
+    color: $colorset-1-game-white;
+
+    span { 
+      background-color: $colorset-1-player1-int;
+      padding: $article-header-padding;
+    }
+
+    border-left: solid 5000px $colorset-1-player1-int;
+    margin-left: -5000px;
+    padding: $article-header-padding;
+    // padding-left: 500px;
+    // width: auto;
+    // margin-right: auto;
+    // padding: 7px;
+    // padding-right: 0;
+
+    overflow: hidden;
+
+    .article-title {
+      font-size: 3em;
+      // z-index: 3;
+    }
+
+    .article-date {
+      padding-left: 4px;
+      font-size: 2em;
+      margin-top: 10px;
+      // z-index: 4;
+    }
+  }
+
+  .cokead {
+    // background-color: red;
+    // padding: 2em;
+  }
+
+  .ferrariad {
+    // background-color: white;
+    // padding: 2em;
   }
 
   .emtop-margin {
@@ -153,30 +294,24 @@ $goldlink: rgba(255,226,70,1);
     padding-bottom: 1em;
   }
 
-  .title-black-shadow {
-    text-shadow: 3px 3px rgba(0,0,0,0.7);
+  .halfemtop-margin {
+    margin-top: 0.5em;
   }
 
-  $section-padding: 7px 14px 7px 0px; // top, right, bottom, left
+  .halfembottom-margin {
+    margin-bottom: 0.5em;
+  }  
 
-  .section-title {
-    font-family: 'SteelfishRgItalic', sans-serif;
-    font-size: 4em;
-    span { 
-      background-color: $colorset-1-player1-int;
-      padding: $section-padding;
-    }
+  .halfemtop-padding {
+    padding-top: 0.5em;
+  }
 
-    border-left: solid 5000px $colorset-1-player1-int;
-    margin-left: -5000px;
-    padding: $section-padding;
-    // padding-left: 500px;
-    // width: auto;
-    // margin-right: auto;
-    // padding: 7px;
-    // padding-right: 0;
+  .halfembottom-padding {
+    padding-bottom: 0.5em;
+  }
 
-    overflow: hidden;
+  .title-black-shadow {
+    text-shadow: 3px 3px rgba(0,0,0,0.7);
   }
 
   .section-divider {
