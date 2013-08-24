@@ -235,24 +235,17 @@ $goldlink: rgba(255,226,70,1);
   $article-header-padding: 7px 14px 7px 0px; // top, right, bottom, left
 
   .article-header {
+    display: inline-block;
     font-family: 'SteelfishRgItalic', sans-serif;
-    // font-size: 3em;
+    // font-size: 4em;
     color: $colorset-1-game-white;
-
-    span { 
-      background-color: $colorset-1-player1-int;
-      padding: $article-header-padding;
-    }
-
-    border-left: solid 5000px $colorset-1-player1-int;
+    background-color: $colorset-1-player1-int;
+    text-align: left;
+    padding-left: 5000px;
     margin-left: -5000px;
-    padding: $article-header-padding;
-    // padding-left: 500px;
-    // width: auto;
-    // margin-right: auto;
-    // padding: 7px;
-    // padding-right: 0;
-
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 14px;
     overflow: hidden;
 
     .article-title {
@@ -261,9 +254,10 @@ $goldlink: rgba(255,226,70,1);
     }
 
     .article-date {
-      padding-left: 4px;
+      // padding-left: 4px;
       font-size: 2em;
-      margin-top: 10px;
+      // line-height: 1.3em;
+      margin-top: 0.1em;
       // z-index: 4;
     }
   }
