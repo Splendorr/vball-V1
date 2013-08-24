@@ -40,6 +40,11 @@ $goldlink: rgba(255,226,70,1);
     // font-size: 2em;
   }
 
+  body {
+    // overflow: hidden;
+    // overflow-x: hidden;
+  }
+
   #color-btn {
     width: 40px;
     height: 40px;
@@ -148,77 +153,61 @@ $goldlink: rgba(255,226,70,1);
 
   $advert-padding: 8px 0px 12px 4px; // top, right, bottom, left
 
+  // .adheader {
+  //   font-family: 'SteelfishRgItalic', sans-serif;
+  //   font-size: 2em;
+  //   background-color: $colorset-1-player2;
+  //   color: $colorset-1-game-white;
+  //   // width: 100%;
+  //   text-align: left;
+
+  //   span { 
+  //     background-color: $colorset-1-player2;
+  //     padding: $advert-padding;
+  //   }
+
+  //   border-right: solid 5000px $colorset-1-player2;
+  //   margin-right: -5000px;
+  //   padding: $advert-padding;
+  //   // padding-left: 500px;
+  //   // width: auto;
+  //   // margin-right: auto;
+  //   // padding: 7px;
+  //   // padding-right: 0;
+
+  //   overflow: hidden;
+  // }
+
+  .advertisements {
+    // border: solid 8px $colorset-1-court-marks;
+    background-color: $colorset-1-court-marks;
+  }
+
   .adheader {
+    @include inline-block; // Bourbon mixin for IE
     font-family: 'SteelfishRgItalic', sans-serif;
     font-size: 2em;
-    background-color: $colorset-1-player2;
     color: $colorset-1-game-white;
-    // width: 100%;
-    text-align: left;
-
-    span { 
-      background-color: $colorset-1-player2;
-      padding: $advert-padding;
-    }
-
-    border-right: solid 5000px $colorset-1-player2;
-    margin-right: -5000px;
-    padding: $advert-padding;
-    // padding-left: 500px;
-    // width: auto;
-    // margin-right: auto;
-    // padding: 7px;
-    // padding-right: 0;
-
-    overflow: hidden;
+    background-color: $colorset-1-player2;
+    text-align: center;
+    width: 100%;
+    // padding-right: 5000px;
+    // margin-right: -5000px;
+    // margin-right: -100px;
+    // border-right: solid 100px $colorset-1-player2;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    // padding-left: 4px;
+    // direction: rtl;
   }
 
   $section-title-padding: 7px 14px 7px 0px; // top, right, bottom, left
 
   .section-title {
+    @include inline-block; // Bourbon mixin for IE
     font-family: 'SteelfishRgItalic', sans-serif;
     font-size: 4em;
-    line-height: 1.4em;
-    color: $colorset-1-game-white;
-
-    span { 
-      background-color: $colorset-1-player1;
-      padding: $section-title-padding;
-    }
-
-    border-left: solid 5000px $colorset-1-player1;
-    margin-left: -5000px;
-    padding: $section-title-padding;
-    // padding-left: 500px;
-    // width: auto;
-    // margin-right: auto;
-    // padding: 7px;
-    // padding-right: 0;
-
-    overflow: hidden;
-  }
-
-  .section-title2 {
-    display: inline-block;
-    font-family: 'SteelfishRgItalic', sans-serif;
-    font-size: 4em;
-    color: $colorset-1-game-white;
-    background-color: $colorset-1-player1;
-    text-align: left;
-    padding-left: 5000px;
-    margin-left: -5000px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 14px;
-    overflow: hidden;
-
-    // padding: $section-title-padding;
-  }
-
-  .articletitle2 {
-    display: inline-block;
-    font-family: 'SteelfishRgItalic', sans-serif;
-    // font-size: 4em;
+    text-transform: uppercase;
     color: $colorset-1-game-white;
     background-color: $colorset-1-player1;
     text-align: left;
@@ -235,9 +224,8 @@ $goldlink: rgba(255,226,70,1);
   $article-header-padding: 7px 14px 7px 0px; // top, right, bottom, left
 
   .article-header {
-    display: inline-block;
+    @include inline-block; // Bourbon mixin for IE
     font-family: 'SteelfishRgItalic', sans-serif;
-    // font-size: 4em;
     color: $colorset-1-game-white;
     background-color: $colorset-1-player1-int;
     text-align: left;
@@ -250,26 +238,40 @@ $goldlink: rgba(255,226,70,1);
 
     .article-title {
       font-size: 3em;
-      // z-index: 3;
     }
 
     .article-date {
-      // padding-left: 4px;
       font-size: 2em;
-      // line-height: 1.3em;
       margin-top: 0.1em;
-      // z-index: 4;
     }
   }
 
-  .cokead {
-    // background-color: red;
-    // padding: 2em;
+  .article-body {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
+    p:first-child {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .float-ball {
+      float: left;
+      @include grid-column(3);
+    }
   }
 
-  .ferrariad {
-    // background-color: white;
-    // padding: 2em;
+  .section-divider {
+    padding-left: 5000px;
+    margin-left: -5000px;
+    border-bottom: 1.5em double $colorset-1-player2;
+  }
+
+  .float-left {
+    float: left;
   }
 
   .emtop-margin {
@@ -306,10 +308,6 @@ $goldlink: rgba(255,226,70,1);
 
   .title-black-shadow {
     text-shadow: 3px 3px rgba(0,0,0,0.7);
-  }
-
-  .section-divider {
-    border-bottom: 1.5em double $colorset-1-player2;
   }
 
   .justascootch {
