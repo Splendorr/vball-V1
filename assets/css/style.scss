@@ -40,6 +40,11 @@ $goldlink: rgba(255,226,70,1);
     // font-size: 2em;
   }
 
+  body {
+    // overflow: hidden;
+    // overflow-x: hidden;
+  }
+
   #color-btn {
     width: 40px;
     height: 40px;
@@ -66,17 +71,208 @@ $goldlink: rgba(255,226,70,1);
     }
   }
 
+  $logo-box-shadow-color: $colorset-1-light-stripe;
+  .videoball-logo-container-stripe {
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    z-index: 1;
+    background-color: white;
+    // border-top: solid 1em $colorset-1-ball;
+    // border-bottom: solid 1em $colorset-1-ball;
+    box-shadow:
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 3.5em $logo-box-shadow-color,
+      inset 0em -4em $logo-box-shadow-color
+    ;
+
+    @media only screen and (min-width: emCalc(400px)) {
+      box-shadow:
+        inset 0em 0em $logo-box-shadow-color,
+        inset 0em 0em $logo-box-shadow-color,
+        inset 0em 4.5em $logo-box-shadow-color,
+        inset 0em -5em $logo-box-shadow-color
+      ;
+    }
+
+    @media #{$small} {
+      box-shadow:
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 0em $logo-box-shadow-color,
+      inset 0em 5em $logo-box-shadow-color,
+      inset 0em -5.5em $logo-box-shadow-color
+    ;
+    }
+
+    @media only screen and (min-width: emCalc(1080px)) {
+      box-shadow:
+        inset 0em 0em $logo-box-shadow-color,
+        inset 0em 0em $logo-box-shadow-color,
+        inset 0em 6em $logo-box-shadow-color,
+        inset 0em -6.5em $logo-box-shadow-color
+      ;
+    }
+
+  }
+
   .videoball-container-stripe {
     // background-color: $redpeach;
     width: 100%;
     padding-top: 1.5em;
     padding-bottom: 2em;
+    overflow: hidden;
   }
   .videoball-title {
+    position: relative;
     font-family: 'SteelfishRgItalic', sans-serif;
     // font-size: 12em;
     text-align: center;
     color: $colorset-1-game-white;
+    z-index: 2;
+  }
+
+  .slide-in {
+    display: none;
+    left: 1000px;
+
+    @media #{$small} {
+      left: 2000px;
+    }
+  } // End .slide-in
+
+  .advertisements {
+
+    // border: solid 2px $colorset-1-game-white;
+    
+    h1, h2, h3 {
+      font-family: 'SteelfishRgItalic', sans-serif;
+    }
+
+  }
+
+  $advert-padding: 8px 0px 12px 4px; // top, right, bottom, left
+
+  // .adheader {
+  //   font-family: 'SteelfishRgItalic', sans-serif;
+  //   font-size: 2em;
+  //   background-color: $colorset-1-player2;
+  //   color: $colorset-1-game-white;
+  //   // width: 100%;
+  //   text-align: left;
+
+  //   span { 
+  //     background-color: $colorset-1-player2;
+  //     padding: $advert-padding;
+  //   }
+
+  //   border-right: solid 5000px $colorset-1-player2;
+  //   margin-right: -5000px;
+  //   padding: $advert-padding;
+  //   // padding-left: 500px;
+  //   // width: auto;
+  //   // margin-right: auto;
+  //   // padding: 7px;
+  //   // padding-right: 0;
+
+  //   overflow: hidden;
+  // }
+
+  .advertisements {
+    // border: solid 8px $colorset-1-court-marks;
+    background-color: $colorset-1-court-marks;
+    text-align: center;
+  }
+
+  .adheader {
+    @include inline-block; // Bourbon mixin for IE
+    font-family: 'SteelfishRgItalic', sans-serif;
+    font-size: 2em;
+    color: $colorset-1-game-white;
+    background-color: $colorset-1-player2-int;
+    text-align: center;
+    width: 100%;
+    // padding-right: 5000px;
+    // margin-right: -5000px;
+    // margin-right: -100px;
+    // border-right: solid 100px $colorset-1-player2;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    // padding-left: 4px;
+    // direction: rtl;
+  }
+
+  $section-title-padding: 7px 14px 7px 0px; // top, right, bottom, left
+
+  .section-title {
+    @include inline-block; // Bourbon mixin for IE
+    font-family: 'SteelfishRgItalic', sans-serif;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: $colorset-1-game-white;
+    background-color: $colorset-1-player1;
+    text-align: left;
+    padding-left: 5000px;
+    margin-left: -5000px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 14px;
+    overflow: hidden;
+
+    // padding: $section-title-padding;
+  }
+
+  $article-header-padding: 7px 14px 7px 0px; // top, right, bottom, left
+
+  .article-header {
+    @include inline-block; // Bourbon mixin for IE
+    font-family: 'SteelfishRgItalic', sans-serif;
+    color: $colorset-1-game-white;
+    background-color: $colorset-1-player1-int;
+    text-align: left;
+    padding-left: 5000px;
+    margin-left: -5000px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 14px;
+    overflow: hidden;
+
+    .article-title {
+      font-size: 3em;
+    }
+
+    .article-date {
+      font-size: 2em;
+      margin-top: 0.1em;
+    }
+  }
+
+  .article-body {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
+    p:first-child {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .float-ball {
+      float: left;
+      @include grid-column(3);
+    }
+  }
+
+  .section-divider {
+    padding-left: 5000px;
+    margin-left: -5000px;
+    border-bottom: 1.5em double $colorset-1-player2;
+  }
+
+  .float-left {
+    float: left;
   }
 
   .emtop-margin {
@@ -95,34 +291,24 @@ $goldlink: rgba(255,226,70,1);
     padding-bottom: 1em;
   }
 
+  .halfemtop-margin {
+    margin-top: 0.5em;
+  }
+
+  .halfembottom-margin {
+    margin-bottom: 0.5em;
+  }  
+
+  .halfemtop-padding {
+    padding-top: 0.5em;
+  }
+
+  .halfembottom-padding {
+    padding-bottom: 0.5em;
+  }
+
   .title-black-shadow {
     text-shadow: 3px 3px rgba(0,0,0,0.7);
-  }
-
-  $section-padding: 7px 14px 7px 0px; // top, right, bottom, left
-
-  .section-title {
-    font-family: 'SteelfishRgItalic', sans-serif;
-    font-size: 4em;
-    span { 
-      background-color: $colorset-1-player1-int;
-      padding: $section-padding;
-    }
-
-    border-left: solid 5000px $colorset-1-player1-int;
-    margin-left: -5000px;
-    padding: $section-padding;
-    // padding-left: 500px;
-    // width: auto;
-    // margin-right: auto;
-    // padding: 7px;
-    // padding-right: 0;
-
-    overflow: hidden;
-  }
-
-  .section-divider {
-    border-bottom: 1.5em double $colorset-1-player2;
   }
 
   .justascootch {
